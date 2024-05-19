@@ -13,10 +13,10 @@ def create_network():
     net.addController('c0', controller=RemoteController, ip='127.0.0.1', port=6653)
 
     info("*** Adding Hosts _ Pink Slice ***\n")
-    H1 = net.addHost('H1', ip='10.0.0.1')
-    H2 = net.addHost('H2', ip='10.0.0.2')
-    H5 = net.addHost('H5', ip='10.0.0.5')
-    H6 = net.addHost('H6', ip='10.0.0.6')
+    H1 = net.addHost('H1', ip='10.0.0.1/24')
+    H2 = net.addHost('H2', ip='10.0.0.2/24')
+    H5 = net.addHost('H5', ip='10.0.0.5/24')
+    H6 = net.addHost('H6', ip='10.0.0.6/24')
 
     info("*** Adding Switches _ Pink Slice ***\n")
     S1 = net.addSwitch('S1')
@@ -35,10 +35,10 @@ def create_network():
     net.addLink(S6 , H6 , port1=4 , port2=1)
 
     info("*** Adding Hosts _ Blue Slice ***\n")
-    H3 = net.addHost('H3', ip='10.0.0.3')
-    H4 = net.addHost('H4', ip='10.0.0.4')
-    H7 = net.addHost('H7', ip='10.0.0.7')
-    H8 = net.addHost('H8', ip='10.0.0.8')
+    H3 = net.addHost('H3', ip='10.0.0.3/24')
+    H4 = net.addHost('H4', ip='10.0.0.4/24')
+    H7 = net.addHost('H7', ip='10.0.0.7/24')
+    H8 = net.addHost('H8', ip='10.0.0.8/24')
 
     info("*** Adding Switches _ Blue Slice ***\n")
     S2 = net.addSwitch('S2')
